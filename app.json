@@ -3,17 +3,21 @@
     "name": "spiritualcalendar",
     "slug": "spiritualcalendar",
     "version": "1.0.0",
-    "runtimeVersion": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "platforms": [
       "ios",
       "android",
       "web"
     ],
+    "splash": {
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#60A5FA"
+    },
     "android": {
       "package": "com.boltexpo.spiritualcalendar",
       "versionCode": 1,
@@ -22,9 +26,8 @@
         "backgroundColor": "#60A5FA"
       },
       "permissions": [
-        "android.permission.RECEIVE_BOOT_COMPLETED",
-        "android.permission.VIBRATE",
-        "android.permission.WAKE_LOCK"
+        "NOTIFICATIONS",
+        "VIBRATE"
       ]
     },
     "ios": {
@@ -40,7 +43,6 @@
     "plugins": [
       "expo-router",
       "expo-font",
-      "expo-web-browser",
       [
         "expo-notifications",
         {
@@ -49,26 +51,12 @@
           "sounds": []
         }
       ],
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "compileSdkVersion": 34,
-            "targetSdkVersion": 34,
-            "buildToolsVersion": "34.0.0",
-            "minSdkVersion": 21,
-            "proguardMinify": false,
-            "enableProguardInReleaseBuilds": false,
-            "enableShrinkResourcesInReleaseBuilds": false
-          }
-        }
-      ]
+      "expo-build-properties"
     ],
     "experiments": {
       "typedRoutes": true
     },
     "extra": {
-      "router": {},
       "eas": {
         "projectId": "45bd60e2-e9e9-4275-8b3f-fb57d2ae6f8f"
       }
