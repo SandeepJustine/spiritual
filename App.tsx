@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Calendar, Clock12Icon as Home, Settings, Bell, BookOpen } from 'lucide-react-native';
+import { Calendar, Clock12 as Home, Settings, Bell, BookOpen } from 'lucide-react-native';
 
 // Import screens
 import TodayScreen from './app/(tabs)/index';
